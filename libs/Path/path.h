@@ -15,9 +15,9 @@ namespace shos {
         explicit Path(const std::string &path) {
             if (path.empty()) throw ENOENT;
             if (path.size() > PATH_MAX) throw ENAMETOOLONG;
-            Tokenizer s(path, "/");
-            while (s.NextToken()) {
-                paths.push_back(s.GetToken());
+            shos::Tokenizer s(path, "/");
+            while (s.next_token()) {
+                paths.push_back(s.get_token());
             }
         }
 

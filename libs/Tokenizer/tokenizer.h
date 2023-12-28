@@ -20,25 +20,28 @@ static std::vector<std::string> tokenize(const std::string &path, const char del
     }
     return vec;
 }
-class Tokenizer {
-public:
-    static const std::string DELIMITERS;
 
-    explicit Tokenizer(std::string_view str);
+namespace shos {
+    class Tokenizer {
+    public:
+        static const std::string DELIMITERS;
 
-    Tokenizer(std::string_view str, std::string_view delimiters);
+        explicit Tokenizer(std::string_view str);
 
-    bool next_token();
+        Tokenizer(std::string_view str, std::string_view delimiters);
 
-    bool next_token(const std::string &delimiters);
+        bool next_token();
 
-    [[nodiscard]] std::string get_token() const {
-        return m_token;
-    }
+        bool next_token(const std::string &delimiters);
 
-protected:
-    size_t m_offset;
-    const std::string m_string;
-    std::string m_token;
-    std::string m_delimiters;
-};
+        [[nodiscard]] std::string get_token() const {
+            return m_token;
+        }
+
+    protected:
+        size_t m_offset;
+        const std::string m_string;
+        std::string m_token;
+        std::string m_delimiters;
+    };
+}
