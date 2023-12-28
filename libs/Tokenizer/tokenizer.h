@@ -36,7 +36,6 @@ public:
         return m_token;
     }
 
-    void Reset();
 
 protected:
     size_t m_offset;
