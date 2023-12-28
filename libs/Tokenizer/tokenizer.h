@@ -28,14 +28,13 @@ public:
 
     Tokenizer(std::string_view str, std::string_view delimiters);
 
-    bool NextToken();
+    bool next_token();
 
-    bool NextToken(const std::string &delimiters);
+    bool next_token(const std::string &delimiters);
 
-    [[nodiscard]] std::string GetToken() const {
+    [[nodiscard]] std::string get_token() const {
         return m_token;
     }
-
 
 protected:
     size_t m_offset;

@@ -12,11 +12,11 @@ Tokenizer::Tokenizer(std::string_view str, std::string_view delimiters) :
         m_offset(0),
         m_delimiters(delimiters) {}
 
-bool Tokenizer::NextToken() {
-    return NextToken(m_delimiters);
+bool Tokenizer::next_token() {
+    return next_token(m_delimiters);
 }
 
-bool Tokenizer::NextToken(const std::string &delimiters) {
+bool Tokenizer::next_token(const std::string &delimiters) {
     size_t i = m_string.find_first_not_of(delimiters, m_offset);
     if (std::string::npos == i) {
         m_offset = m_string.length();
