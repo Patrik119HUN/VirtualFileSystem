@@ -1,6 +1,6 @@
 #pragma once
 
-#include "inode.h"
+#include "../../include/inode.h"
 
 namespace shos {
     class FolderNode : public INode {

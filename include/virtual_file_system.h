@@ -5,11 +5,11 @@
 #include <optional>
 
 #include "file_system_interface.h"
-#include "tokenizer.h"
-#include "folder_node.h"
-#include "file_system_node.h"
+#include "../libs/Tokenizer/tokenizer.h"
+#include "../libs/FolderNode/folder_node.h"
+#include "../libs/FileSystemNode/file_system_node.h"
 #define PATH_MAX 4096
-#include "path.h"
+#include "../libs/Path/path.h"
 class VirtualFileSystem {
 public:
     void mkdir(const std::string &t_path);

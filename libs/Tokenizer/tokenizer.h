@@ -20,3 +20,27 @@ static std::vector<std::string> tokenize(const std::string &path, const char del
     }
     return vec;
 }
+class Tokenizer {
+public:
+    static const std::string DELIMITERS;
+
+    Tokenizer(const std::string &str);
+
+    Tokenizer(const std::string &str, const std::string &delimiters);
+
+    bool NextToken();
+
+    bool NextToken(const std::string &delimiters);
+
+    const std::string GetToken() const {
+        return m_token;
+    }
+
+    void Reset();
+
+protected:
+    size_t m_offset;
+    const std::string m_string;
+    std::string m_token;
+    std::string m_delimiters;
+};

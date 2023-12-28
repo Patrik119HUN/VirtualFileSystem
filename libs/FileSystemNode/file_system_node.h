@@ -1,7 +1,7 @@
 #pragma once
 
-#include "inode.h"
-#include "file_system_interface.h"
+#include "../../include/inode.h"
+#include "../../include/file_system_interface.h"
 
 namespace shos {
     class FileSystemNode : public INode {

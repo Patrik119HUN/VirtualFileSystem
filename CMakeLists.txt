@@ -4,12 +4,14 @@ project(virtual_file_system)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(virtual_file_system main.cpp
-        inode.h
-        file_system_interface.h
-        virtual_file_system.h
-        tokenizer.h
-        fat_file_system.h
-        folder_node.h
-        virtual_file_system.cpp
-        file_system_node.h
-        path.h)
+        include/inode.h
+        include/file_system_interface.h
+        include/virtual_file_system.h
+        libs/Tokenizer/tokenizer.h
+        include/fat_file_system.h
+        libs/FolderNode/folder_node.h
+        src/virtual_file_system.cpp
+        libs/FileSystemNode/file_system_node.h
+        libs/Path/path.h
+        libs/Tokenizer/tokenizer.cpp
+)

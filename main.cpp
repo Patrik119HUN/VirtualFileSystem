@@ -1,6 +1,6 @@
-#include "virtual_file_system.h"
-#include "fat_file_system.h"
-#include "path.h"
+#include "include/virtual_file_system.h"
+#include "include/fat_file_system.h"
+#include "libs/Path/path.h"
 
 int main() {
     vfs.mkdir("alma/béka");
