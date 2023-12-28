@@ -24,15 +24,15 @@ class Tokenizer {
 public:
     static const std::string DELIMITERS;
 
-    Tokenizer(const std::string &str);
+    explicit Tokenizer(std::string_view str);
 
-    Tokenizer(const std::string &str, const std::string &delimiters);
+    Tokenizer(std::string_view str, std::string_view delimiters);
 
     bool NextToken();
 
     bool NextToken(const std::string &delimiters);
 
-    const std::string GetToken() const {
+    [[nodiscard]] std::string GetToken() const {
         return m_token;
     }
 

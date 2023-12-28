@@ -2,13 +2,13 @@
 
 const std::string Tokenizer::DELIMITERS(" \t\n\r");
 
-Tokenizer::Tokenizer(const std::string &s) :
-        m_string(s),
+Tokenizer::Tokenizer(std::string_view str) :
+        m_string(str),
         m_offset(0),
         m_delimiters(DELIMITERS) {}
 
-Tokenizer::Tokenizer(const std::string &s, const std::string &delimiters) :
-        m_string(s),
+Tokenizer::Tokenizer(std::string_view str, std::string_view delimiters) :
+        m_string(str),
         m_offset(0),
         m_delimiters(delimiters) {}
 
